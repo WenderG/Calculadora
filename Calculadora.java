@@ -12,4 +12,16 @@ public class Calculadora{
         
         System.out.print(n % 2);
     }
+
+    public float soma(float n1, float n2) {
+        float r = n1 + n2;
+
+        return r;
+    }
+
+    public float subtracao(float n1, float n2) {
+        float r = n1 - n2;
+
+        return r;
+    }
 }
