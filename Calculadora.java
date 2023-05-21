@@ -1,9 +1,17 @@
+import java.util.Scanner;
+
 public class Calculadora{
     public static void main(String [] args) {
-        int decimal = 3;
-        System.out.printf("O número %d em binário é: ", decimal);
-        converteBinario(decimal);
-        System.out.println();
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Número decimal:");
+        int numero = Integer.parseInt(entrada.nextLine());
+
+        System.out.print("Binário: ");
+        converteBinario(numero);
+
+        entrada.close();
     }
 
     public static void converteBinario(int n) {
