@@ -44,4 +44,15 @@ public class Calculadora{
 
         return r;
     }
+
+    public static String converteBinarioNegativo(int decimal) {
+        StringBuilder binary = new StringBuilder();
+        
+        while (decimal != 0) {
+            binary.insert(0, Math.abs(decimal % 2));
+            decimal /= -2;
+        }
+        
+        return binary.toString();
+    }
 }
