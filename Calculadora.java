@@ -3,15 +3,11 @@ import java.util.Scanner;
 public class Calculadora{
     public static void main(String [] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        boolean aux = true;
 
-        System.out.print("Número decimal:");
-        int numero = Integer.parseInt(entrada.nextLine());
-
-        System.out.print("Binário: ");
-        converteBinario(numero);
-
-        entrada.close();
+        do{
+            
+        }while(aux);
     }
 
     public static void converteBinario(int n) {
