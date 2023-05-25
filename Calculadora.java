@@ -5,9 +5,18 @@ public class Calculadora{
 
         boolean aux = true;
 
+        Scanner entrada = new Scanner(System.in);
+
         do{
-            
+            System.out.print("Número decimal: ");
+            int numero = Integer.parseInt(entrada.nextLine());
+    
+            System.out.print("Binário: ");
+            converteBinario(numero);
+            System.out.println("\n\n\n");
         }while(aux);
+
+        entrada.close();
     }
 
     public static void converteBinario(int n) {
