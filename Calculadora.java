@@ -1,13 +1,16 @@
 import java.util.Scanner;
+import java.io.IOException;
 
 public class Calculadora {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException{
         boolean executar = true;
         int opc;
         float numero1, numero2;
         Scanner entrada = new Scanner(System.in);
 
         do {
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
             System.out.println("Calculadora\n");
             System.out.println("1 - Decimal -> Binário");
             System.out.println("2 - Decimal Negativo -> Binário Negativo");
@@ -15,9 +18,11 @@ public class Calculadora {
             System.out.println("4 - Subtração");
             System.out.println("5 - Multiplicação");
             System.out.println("6 - Divisão");
-            System.out.println("0 - Sair");
+            System.out.println("0 - Sair\n");
             System.out.print("Opção: ");
             opc = Integer.parseInt(entrada.nextLine());
+
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 
             switch (opc) {
                 case 0:
@@ -31,6 +36,8 @@ public class Calculadora {
                     System.out.print("Binário: ");
                     System.out.println(converteDecimalParaBinario(numeroDecimal));
                     System.out.println("\n\n\n");
+                    System.out.println("Pressione Enter para continuar\n\n");
+                    entrada.nextLine();
                     break;
 
                 case 2:
@@ -40,6 +47,8 @@ public class Calculadora {
                     System.out.print("Binário Negativo: ");
                     System.out.println(converteDecimalNegativoParaBinarioNegativo(numeroDecimalNegativo));
                     System.out.println("\n\n\n");
+                    System.out.println("Pressione Enter para continuar\n\n");
+                    entrada.nextLine();
                     break;
 
                 case 3:
@@ -51,6 +60,8 @@ public class Calculadora {
                     float soma = realizarSoma(numero1, numero2);
                     System.out.println("Resultado: " + soma);
                     System.out.println("\n\n\n");
+                    System.out.println("Pressione Enter para continuar\n\n");
+                    entrada.nextLine();
                     break;
 
                 case 4:
@@ -62,6 +73,8 @@ public class Calculadora {
                     float subtracao = realizarSubtracao(numero1, numero2);
                     System.out.println("Resultado: " + subtracao);
                     System.out.println("\n\n\n");
+                    System.out.println("Pressione Enter para continuar\n\n");
+                    entrada.nextLine();
                     break;
 
                 case 5:
@@ -73,6 +86,8 @@ public class Calculadora {
                     float multiplicacao = realizarMultiplicacao(numero1, numero2);
                     System.out.println("Resultado: " + multiplicacao);
                     System.out.println("\n\n\n");
+                    System.out.println("Pressione Enter para continuar\n\n");
+                    entrada.nextLine();
                     break;
 
                 case 6:
@@ -84,6 +99,8 @@ public class Calculadora {
                     float divisao = realizarDivisao(numero1, numero2);
                     System.out.println("Resultado: " + divisao);
                     System.out.println("\n\n\n");
+                    System.out.println("Pressione Enter para continuar\n\n");
+                    entrada.nextLine();
                     break;
 
                 default:
