@@ -26,6 +26,8 @@ public class Calculadora {
 
             switch (opc) {
                 case 0:
+                    System.out.println("Encerrando...");
+                    
                     executar = false;
                     break;
 
