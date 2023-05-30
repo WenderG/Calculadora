@@ -2,7 +2,7 @@
 
 Calculadora para auxiliar em cálculos de conversão.
 
->Status do projeto: Em desenvolvimento.
+>Status do projeto: Finalizado.
 
 <h2>Sobre:</h2>
 <br>
